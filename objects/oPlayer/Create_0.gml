@@ -1,0 +1,1 @@
+moving_speed = TILE_SIZE / 8;
