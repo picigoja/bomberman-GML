@@ -1,14 +1,20 @@
-for (var i = 0; i <= explosion_radius; ++i) {
-	for (var dir = 0; dir < 360; dir += 90) {
-		var _x = x + lengthdir_x(i * TILE_SIZE, dir);
-		var _y = y + lengthdir_y(i * TILE_SIZE, dir);
-		if (((i = 0 and dir = 0) or i > 0) and !place_meeting(_x, _y, oWall)) { 
+var _excluded_directions = ds_list_create();
+for (var _i = 0; _i <= explosion_radius; ++_i) {
+	for (var _dir = 0; _dir < 360; _dir += 90) {
+		var _x = x + lengthdir_x(_i * TILE_SIZE, _dir);
+		var _y = y + lengthdir_y(_i * TILE_SIZE, _dir);
+		var _dir_not_in_excluded = (ds_list_find_index(_excluded_directions, _dir) = -1);
+		if (((_i = 0 and _dir = 0) or _i > 0) and !place_meeting(_x, _y, oWall) and _dir_not_in_excluded) { 
 			with instance_create_depth(_x, _y, depth, oExplosion) {
-				image_direction = dir;
-				is_first_piece = bool(i = 0);
-				is_last_piece = bool(other.explosion_radius = i);
+				image_direction = _dir;
+				is_first_piece = bool(_i = 0);
+				is_last_piece = bool(other.explosion_radius = _i);
 			}
+		}
+		if (place_meeting(_x, _y, oWall)) {
+			ds_list_add(_excluded_directions, _dir);
 		}
 	}
 }
+ds_list_destroy(_excluded_directions);
 instance_destroy();
