@@ -12,6 +12,7 @@
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":3,},
     {"id":{"name":"obj_GUI_control","path":"objects/obj_GUI_control/obj_GUI_control.yy",},"order":8,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
+    {"id":{"name":"obj_powerup_expl","path":"objects/obj_powerup_expl/obj_powerup_expl.yy",},"order":2,},
     {"id":{"name":"crv_explosion","path":"animcurves/crv_explosion/crv_explosion.yy",},"order":0,},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},"order":0,},
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},"order":3,},
