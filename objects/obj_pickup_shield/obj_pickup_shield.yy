@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_box",
-    "path": "sprites/spr_box/spr_box.yy",
+    "name": "spr_pwrups",
+    "path": "sprites/spr_pwrups/spr_pwrups.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_wall_parent",
-    "path": "objects/obj_wall_parent/obj_wall_parent.yy",
+    "name": "obj_pickup_parent",
+    "path": "objects/obj_pickup_parent/obj_pickup_parent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,17 +23,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "wall group",
-    "path": "folders/Objects/wall group.yy",
+    "name": "pickups group",
+    "path": "folders/Objects/pickups group.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_box",
+  "name": "obj_pickup_shield",
   "tags": [],
   "resourceType": "GMObject",
 }

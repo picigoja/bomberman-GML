@@ -9,7 +9,7 @@ var _vertical_movement = (_down - _up);
 
 var _movement_restrictor = obj_wall_parent;
 
-#region // Movement
+#region Movement
 // Horizontal movement
 if (!place_meeting(x + _horizontal_movement, y, _movement_restrictor)) {
 	x += _horizontal_movement * moving_speed;
@@ -47,7 +47,7 @@ if (!place_meeting(x, y + _vertical_movement, _movement_restrictor)) {
 }
 #endregion
 
-#region // Action 1
+#region Action 1
 
 if (_action1 and action1_enabled) {
 	action1_enabled = false;
@@ -57,5 +57,17 @@ if (_action1 and action1_enabled) {
 		explosion_radius = other.explosion_radius;
 	}
 }
+
+#endregion
+
+#region Hit by explosion, Shiled handling
+
+var _exp = instance_place(x, y, obj_explosion),
+if (_exp != noone and ds_list_find_index(explosions_list, _exp) = -1) {
+	shields--;
+	ds_list_add(explosions_list, _exp);
+}
+
+if (shields <= 0) instance_destroy();
 
 #endregion

@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "wall group",
+    "path": "folders/Objects/wall group.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_wall_parent",
