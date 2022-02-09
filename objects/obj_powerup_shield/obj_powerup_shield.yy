@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_pickup_parent",
-    "path": "objects/obj_pickup_parent/obj_pickup_parent.yy",
+    "name": "obj_powerup_parent",
+    "path": "objects/obj_powerup_parent/obj_powerup_parent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "pickups group",
-    "path": "folders/Objects/pickups group.yy",
+    "name": "powerup group",
+    "path": "folders/Objects/powerup group.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pickup_shield",
+  "name": "obj_powerup_shield",
   "tags": [],
   "resourceType": "GMObject",
 }

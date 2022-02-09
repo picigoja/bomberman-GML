@@ -26,11 +26,11 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "pickups group",
-    "path": "folders/Objects/pickups group.yy",
+    "name": "powerup group",
+    "path": "folders/Objects/powerup group.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pickup_parent",
+  "name": "obj_powerup_parent",
   "tags": [],
   "resourceType": "GMObject",
 }

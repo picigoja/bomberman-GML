@@ -7,9 +7,8 @@ var _action1 = keyboard_check(vk_space);
 var _horizontal_movement = (_right - _left);
 var _vertical_movement = (_down - _up);
 
-var _movement_restrictor = obj_wall_parent;
-
 #region Movement
+var _movement_restrictor = obj_wall_parent;
 // Horizontal movement
 if (!place_meeting(x + _horizontal_movement, y, _movement_restrictor)) {
 	x += _horizontal_movement * moving_speed;
@@ -69,5 +68,11 @@ if (_exp != noone and ds_list_find_index(explosions_list, _exp) = -1) {
 }
 
 if (shields <= 0) instance_destroy();
+
+#endregion
+
+#region Powerups
+
+if (place_meeting(x, y, obj_powerup_shield)) shields++;
 
 #endregion
