@@ -8,6 +8,7 @@ var _horizontal_movement = (_right - _left);
 var _vertical_movement = (_down - _up);
 
 #region Movement
+
 var _movement_restrictor = obj_wall_parent;
 // Horizontal movement
 if (!place_meeting(x + _horizontal_movement, y, _movement_restrictor)) {
@@ -65,8 +66,8 @@ var _exp = instance_place(x, y, obj_explosion),
 if (_exp != noone and ds_list_find_index(explosions_list, _exp) = -1) {
 	shields--;
 	ds_list_add(explosions_list, _exp);
+	
 }
-
 if (shields <= 0) instance_destroy();
 
 #endregion
@@ -74,5 +75,11 @@ if (shields <= 0) instance_destroy();
 #region Powerups
 
 if (place_meeting(x, y, obj_powerup_shield)) shields++;
+if (place_meeting(x, y, obj_powerup_expl)) explosion_radius++;
+if (place_meeting(x, y, obj_powerup_cntrup)) bomb_timer += 10;
+if (place_meeting(x, y, obj_powerup_cntrdown)) bomb_timer -= 10;
+if (place_meeting(x, y, obj_powerup_placeup)) action1_timer += 10;
+if (place_meeting(x, y, obj_powerup_placedown)) action1_timer -= 10;
+if (place_meeting(x, y, obj_powerup_speed)) moving_speed = moving_speed;
 
 #endregion

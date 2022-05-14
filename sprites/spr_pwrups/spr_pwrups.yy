@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pwrups","path":"sprites/spr_pwrups/spr_pwrups.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pwrups",
     "tags": [],
     "resourceType": "GMSequence",
