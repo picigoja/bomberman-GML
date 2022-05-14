@@ -1,0 +1,1 @@
+if (place_meeting(x, y, obj_explosion)) alarm_set(0, 1);
