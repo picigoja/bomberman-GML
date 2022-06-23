@@ -3,3 +3,4 @@ camera_window_y_ratio = camera_get_view_height(view_camera[view_current]) / wind
 
 sidepanel_x = window_get_width() - 206 / camera_window_x_ratio;
 sidepanel_y = 0;
+

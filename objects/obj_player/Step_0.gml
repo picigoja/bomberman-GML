@@ -6,13 +6,14 @@ var _action1 = keyboard_check(vk_space);
 
 var _horizontal_movement = (_right - _left);
 var _vertical_movement = (_down - _up);
+var _moving_speed = TILE_SIZE / 16;
 
 #region Movement
 
 var _movement_restrictor = obj_wall_parent;
 // Horizontal movement
 if (!place_meeting(x + _horizontal_movement, y, _movement_restrictor)) {
-	x += _horizontal_movement * moving_speed;
+	x += _horizontal_movement * _moving_speed;
 } else {
 	var _yto = y;
 	var _ydis = TILE_SIZE * 2;
@@ -24,13 +25,13 @@ if (!place_meeting(x + _horizontal_movement, y, _movement_restrictor)) {
 		}
 	}
 	if (!place_meeting(x, y + sign(_yto - y), _movement_restrictor)) {
-		y += sign(_yto - y) * moving_speed * bool(_vertical_movement = 0);
+		y += sign(_yto - y) * _moving_speed * bool(_vertical_movement = 0);
 	}
 }
 
 // Vertical movement
 if (!place_meeting(x, y + _vertical_movement, _movement_restrictor)) {
-	y += _vertical_movement * moving_speed;
+	y += _vertical_movement * _moving_speed;
 } else {
 	var _xto = x;
 	var _xdis = TILE_SIZE * 2;
@@ -42,9 +43,10 @@ if (!place_meeting(x, y + _vertical_movement, _movement_restrictor)) {
 		}
 	}
 	if (!place_meeting(x + sign(_xto - x), y, _movement_restrictor)) {
-		x += sign(_xto - x) * moving_speed * bool(_horizontal_movement = 0);
+		x += sign(_xto - x) * _moving_speed * bool(_horizontal_movement = 0);
 	}
 }
+
 #endregion
 
 #region Action 1
@@ -64,8 +66,10 @@ if (_action1 and action1_enabled) {
 
 var _exp = instance_place(x, y, obj_explosion),
 if (_exp != noone and ds_list_find_index(explosions_list, _exp) = -1) {
-	shields--;
-	ds_list_add(explosions_list, _exp);
+	if (_exp.percentage <= .5) {
+		shields--;
+		ds_list_add(explosions_list, _exp);
+	}
 	
 }
 if (shields <= 0) instance_destroy();
@@ -80,6 +84,6 @@ if (place_meeting(x, y, obj_powerup_cntrup)) bomb_timer += 10;
 if (place_meeting(x, y, obj_powerup_cntrdown)) bomb_timer -= 10;
 if (place_meeting(x, y, obj_powerup_placeup)) action1_timer += 10;
 if (place_meeting(x, y, obj_powerup_placedown)) action1_timer -= 10;
-if (place_meeting(x, y, obj_powerup_speed)) moving_speed = moving_speed;
+if (place_meeting(x, y, obj_powerup_speed)) _moving_speed = _moving_speed;
 
 #endregion

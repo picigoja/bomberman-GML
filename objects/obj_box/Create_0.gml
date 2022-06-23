@@ -6,3 +6,4 @@ powerup_list = [	obj_powerup_cntrdown,
 					obj_powerup_placeup, 
 					obj_powerup_shield,
 					obj_powerup_speed];
+instance_destroy();

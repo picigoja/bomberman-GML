@@ -8,4 +8,5 @@ explosion_radius = 1;
 explosions_list = ds_list_create();
 shields = 1;
 
-
+image_speed = 0;
+image_index = 0;

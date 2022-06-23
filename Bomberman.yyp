@@ -1,10 +1,12 @@
 {
   "resources": [
     {"id":{"name":"obj_powerup_placeup","path":"objects/obj_powerup_placeup/obj_powerup_placeup.yy",},"order":5,},
+    {"id":{"name":"obj_path","path":"objects/obj_path/obj_path.yy",},"order":9,},
     {"id":{"name":"obj_powerup_speed","path":"objects/obj_powerup_speed/obj_powerup_speed.yy",},"order":7,},
     {"id":{"name":"obj_powerup_parent","path":"objects/obj_powerup_parent/obj_powerup_parent.yy",},"order":1,},
     {"id":{"name":"obj_powerup_placedown","path":"objects/obj_powerup_placedown/obj_powerup_placedown.yy",},"order":6,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":10,},
     {"id":{"name":"round_to_tilesize","path":"scripts/round_to_tilesize/round_to_tilesize.yy",},"order":1,},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},"order":4,},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"order":0,},
@@ -60,7 +62,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.5.1.16",
   },
   "resourceVersion": "1.5",
   "name": "Bomberman",

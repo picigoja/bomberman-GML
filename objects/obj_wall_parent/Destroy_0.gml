@@ -1,0 +1,1 @@
+mp_grid_clear_cell(global.grid, x div TILE_SIZE * TILE_SIZE, y div TILE_SIZE * TILE_SIZE);
