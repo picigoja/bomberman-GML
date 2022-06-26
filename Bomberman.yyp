@@ -1,7 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_powerup_placeup","path":"objects/obj_powerup_placeup/obj_powerup_placeup.yy",},"order":5,},
-    {"id":{"name":"obj_path","path":"objects/obj_path/obj_path.yy",},"order":9,},
+    {"id":{"name":"obj_path","path":"objects/obj_path/obj_path.yy",},"order":1,},
     {"id":{"name":"obj_powerup_speed","path":"objects/obj_powerup_speed/obj_powerup_speed.yy",},"order":7,},
     {"id":{"name":"obj_powerup_parent","path":"objects/obj_powerup_parent/obj_powerup_parent.yy",},"order":1,},
     {"id":{"name":"obj_powerup_placedown","path":"objects/obj_powerup_placedown/obj_powerup_placedown.yy",},"order":6,},
@@ -14,7 +14,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_pwrups","path":"sprites/spr_pwrups/spr_pwrups.yy",},"order":5,},
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":3,},
-    {"id":{"name":"obj_GUI_control","path":"objects/obj_GUI_control/obj_GUI_control.yy",},"order":8,},
+    {"id":{"name":"obj_GUI_control","path":"objects/obj_GUI_control/obj_GUI_control.yy",},"order":0,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
     {"id":{"name":"obj_powerup_expl","path":"objects/obj_powerup_expl/obj_powerup_expl.yy",},"order":2,},
     {"id":{"name":"crv_explosion","path":"animcurves/crv_explosion/crv_explosion.yy",},"order":0,},
@@ -24,6 +24,7 @@
     {"id":{"name":"obj_powerup_reset","path":"objects/obj_powerup_reset/obj_powerup_reset.yy",},"order":8,},
     {"id":{"name":"obj_powerup_cntrup","path":"objects/obj_powerup_cntrup/obj_powerup_cntrup.yy",},"order":3,},
     {"id":{"name":"obj_powerup_shield","path":"objects/obj_powerup_shield/obj_powerup_shield.yy",},"order":0,},
+    {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":12,},
     {"id":{"name":"obj_wall_parent","path":"objects/obj_wall_parent/obj_wall_parent.yy",},"order":2,},
     {"id":{"name":"obj_powerup_cntrdown","path":"objects/obj_powerup_cntrdown/obj_powerup_cntrdown.yy",},"order":4,},
     {"id":{"name":"obj_bomb","path":"objects/obj_bomb/obj_bomb.yy",},"order":2,},
@@ -53,6 +54,7 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/wall group.yy","order":6,"resourceVersion":"1.0","name":"wall group","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/powerup group.yy","order":7,"resourceVersion":"1.0","name":"powerup group","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/utils.yy","order":11,"resourceVersion":"1.0","name":"utils","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
