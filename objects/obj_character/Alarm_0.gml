@@ -1,1 +1,1 @@
-action1_enabled = true;
+action_enabled = true;

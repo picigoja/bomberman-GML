@@ -1,2 +1,2 @@
 event_inherited();
-image_index = 0;
+image_index = img_index;
