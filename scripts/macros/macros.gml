@@ -1,4 +1,7 @@
 #macro TILE_SIZE sprite_get_width(spr_wall)
+#macro CELLS 800 div TILE_SIZE
+
+#macro MOD_BOMB_PROXIMITY 10
 
 #macro BOMB_TIMER_MODIFIER 10
 #macro ACTION_TIMER_MODIFIER 10

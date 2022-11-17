@@ -1,15 +1,29 @@
 event_inherited();
 
-var _right = keyboard_check(vk_right) and player_tag
-				or keyboard_check(ord("D")) and !player_tag;
-var _up = keyboard_check(vk_up) and player_tag 
-				or keyboard_check(ord("W")) and !player_tag;
-var _left = keyboard_check(vk_left) and player_tag 
-				or keyboard_check(ord("A")) and !player_tag;
-var _down = keyboard_check(vk_down) and player_tag 
-				or keyboard_check(ord("S")) and !player_tag;
-action = keyboard_check(vk_numpad0) and player_tag
-				or keyboard_check(vk_space) and !player_tag;
+var _right =	keyboard_check(vk_right)				and player_id = 0
+			or	keyboard_check(ord("D"))				and player_id = 1 
+			or	gamepad_axis_value(0, gp_axislh) > .5	and player_id = 2
+			or	gamepad_axis_value(1, gp_axislh) > .5	and player_id = 3;
+			
+var _up =		keyboard_check(vk_up)					and player_id = 0 
+			or  keyboard_check(ord("W"))				and player_id = 1
+			or  gamepad_axis_value(0, gp_axislv) < -.5	and player_id = 2
+			or  gamepad_axis_value(1, gp_axislv) < -.5	and player_id = 3;
+			
+var _left =		keyboard_check(vk_left)					and player_id = 0 
+			or  keyboard_check(ord("A"))				and player_id = 1
+			or  gamepad_axis_value(0, gp_axislh) < -.5	and player_id = 2
+			or  gamepad_axis_value(1, gp_axislh) < -.5	and player_id = 3;
+			
+var _down =		keyboard_check(vk_down)					and player_id = 0 
+			or  keyboard_check(ord("S"))				and player_id = 1
+			or  gamepad_axis_value(0, gp_axislv) > .5	and player_id = 2
+			or  gamepad_axis_value(1, gp_axislv) > .5	and player_id = 3;
+			
+action =		keyboard_check(vk_numpad0)				and player_id = 0
+			or  keyboard_check(vk_space)				and player_id = 1
+			or  gamepad_button_check(0, gp_face1)		and player_id = 2
+			or  gamepad_button_check(1, gp_face1)		and player_id = 3;
 	
 var _horizontal_movement = (_right - _left);
 var _vertical_movement = (_down - _up);

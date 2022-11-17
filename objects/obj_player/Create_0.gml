@@ -1,2 +1,2 @@
 event_inherited();
-image_index = img_index;
+image_index = player_id;

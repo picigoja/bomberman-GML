@@ -1,6 +1,6 @@
 with instance_place(x, y, obj_character) {
 	instance_destroy(other);
-	switch (other.variant) {
+	switch (other.powerup_variants[other.variant]) {
 		case "shield":
 			shields++;
 		break;
