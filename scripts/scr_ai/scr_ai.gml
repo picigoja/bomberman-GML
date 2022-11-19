@@ -26,11 +26,11 @@ function ai_evaluate_valid_cell(_cell, _id) {
 	var _pwrup = instance_position(_x, _y, obj_powerup);
 	var _pwrup_value = 0;
 	if _pwrup != noone {
-		_pwrup_value = 2 + bool(_pwrup.variant < 2) * 5;
+		_pwrup_value = 2 + bool(_pwrup.variant < 2) * 2;
 	}
 	
-	
-	return _instance_count + _pwrup_value - ai_check_bomb_proximity(_x, _y) * MOD_BOMB_PROXIMITY;
+	var _bp = ai_check_bomb_proximity(_x, _y) * MOD_BOMB_PROXIMITY;
+	return max(_instance_count - _bp, _pwrup_value - _bp);
 }
 
 function instance_nearest_except_self(_x, _y, _obj, _id) {

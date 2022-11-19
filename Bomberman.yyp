@@ -9,6 +9,7 @@
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},"order":4,},
     {"id":{"name":"obj_box","path":"objects/obj_box/obj_box.yy",},"order":0,},
     {"id":{"name":"spr_bomb","path":"sprites/spr_bomb/spr_bomb.yy",},"order":2,},
+    {"id":{"name":"obj_path_control","path":"objects/obj_path_control/obj_path_control.yy",},"order":1,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"spr_pwrups","path":"sprites/spr_pwrups/spr_pwrups.yy",},"order":5,},
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":3,},

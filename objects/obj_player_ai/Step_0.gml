@@ -1,16 +1,8 @@
 event_inherited();
 
 if ai_movement_enabled {
-	var _target = ai_get_target_coordinate(grid, path, x, y, id);
-	if (x == _target[0] and y == _target[1]) {
-		action = true;
-		alarm_set(1, 5);
-	} else {
-		ai_target_x = _target[0];
-		ai_target_y = _target[1];
-	}
-	
-	if mp_grid_path(grid, path, x, y, ai_target_x, ai_target_y, false) {
+	var _target = ai_get_target_coordinate(global.grid, path, x, y, id);
+	if mp_grid_path(global.grid, path, x, y, _target[0], _target[1], false) {
 		for (var i = 0; i < path_get_number(path); ++i) {
 		    path_change_point(path, i, 
 				round_to_tilesize_centered(path_get_point_x(path, i)),
@@ -20,7 +12,17 @@ if ai_movement_enabled {
 		path_start(path, SPEED_SLOW, path_action_stop, false);
 	}
 }
-
+/*
+var _xmov = path_get_x(path, path_position) - path_get_x(path, path_positionprevious);
+var _ymov = path_get_y(path, path_position) - path_get_y(path, path_positionprevious);
+if instance_exists(obj_explosion) {
+	if point_distance(x + _xmov, y + _ymov, obj_explosion.x, obj_explosion.y) < TILE_SIZE {
+		path_speed = 0;
+	} else {
+		path_speed = SPEED_SLOW;
+	}
+}
+*/
 if (ai_target_x = x and ai_target_y = y) {
 	ai_movement_enabled = true;
 }
